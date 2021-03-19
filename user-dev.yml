@@ -1,0 +1,24 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: test-user
+  datasource:
+    url: jdbc:mysql://localhost:3306/springcloud?characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    database: mysql
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:9003/eureka
+  instance:
+    prefer-ip-address: true #优先使用该服务ip地址注册
+    lease-expiration-duration-in-seconds: 90 #断开时间
+    lease-renewal-interval-in-seconds: 30 #
