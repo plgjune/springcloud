@@ -4,7 +4,7 @@ spring:
   application:
     name: test-user
   datasource:
-    url: jdbc:mysql://192.168.152.128/springcloud?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://192.168.152.128/springcloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
